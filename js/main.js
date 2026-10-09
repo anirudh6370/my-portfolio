@@ -94,116 +94,22 @@
 
   $('#year').textContent = new Date().getFullYear();
 
-  /* ---------- Ask my resume ----------
-     The search itself lives in resume-search.js and returns the steps it took.
-     This part only replays those steps on the graph and streams the answer. */
-
-  var traceEl = $('#trace');
-  var answerEl = $('#answer-text');
-  var citesEl = $('#cites');
-  var liveEl = $('#answer-live');
-  var nodes = {};
-  var edges = {};
-  $$('.graph .node').forEach(function (n) { nodes[n.getAttribute('data-node')] = n; });
-  $$('.graph [data-edge]').forEach(function (e) { edges[e.getAttribute('data-edge')] = e; });
-
-  var runId = 0;
-  var current = null;
-
-  function wait(ms) {
-    return new Promise(function (resolve) { setTimeout(resolve, reduceMotion ? 0 : ms); });
-  }
-  function log(step) {
-    var li = document.createElement('li');
-    if (step.warn) li.className = 'warn';
-    var b = document.createElement('b');
-    b.textContent = step.node === 'none' ? 'end' : step.node;
-    var span = document.createElement('span');
-    span.textContent = step.message;
-    li.appendChild(b);
-    li.appendChild(span);
-    traceEl.appendChild(li);
-    traceEl.scrollTop = traceEl.scrollHeight;
-  }
-  function clearEdges() {
-    Object.keys(edges).forEach(function (k) { edges[k].classList.remove('lit'); });
-  }
-  function enter(step) {
-    if (current) { nodes[current].classList.remove('active'); nodes[current].classList.add('done'); }
-    clearEdges();
-    if (step.edge) edges[step.edge].classList.add('lit');
-    nodes[step.node].classList.add('active');
-    current = step.node;
-  }
-  function finish() {
-    if (current) { nodes[current].classList.remove('active'); nodes[current].classList.add('done'); }
-    clearEdges();
-    current = null;
-  }
-
-  async function stream(text, id) {
-    answerEl.textContent = '';
-    answerEl.classList.add('streaming');
-    var parts = text.split(' ');
-    for (var i = 0; i < parts.length; i++) {
-      if (id !== runId) return;
-      answerEl.textContent += (i ? ' ' : '') + parts[i];
-      await wait(22);
+  /* ---------- Tech stack marquee ----------
+     Each row is repeated four times so that half the track always covers the
+     viewport; the CSS animation then slides it by exactly half, left to right. */
+  $$('.marquee-track').forEach(function (track) {
+    var items = $$('li', track);
+    for (var copy = 0; copy < 3; copy++) {
+      items.forEach(function (li) {
+        var clone = li.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      });
     }
-    answerEl.classList.remove('streaming');
-  }
-
-  // announce: read the finished answer to screen readers once, instead of word by word.
-  async function run(query, announce) {
-    var id = ++runId;
-    traceEl.textContent = '';
-    answerEl.textContent = '';
-    answerEl.classList.remove('streaming');
-    citesEl.textContent = '';
-    liveEl.textContent = '';
-    current = null;
-    Object.keys(nodes).forEach(function (k) { nodes[k].classList.remove('active', 'done'); });
-    clearEdges();
-
-    var outcome = window.ResumeSearch.ask(query);
-    for (var i = 0; i < outcome.steps.length; i++) {
-      enter(outcome.steps[i]);
-      log(outcome.steps[i]);
-      await wait(400);
-      if (id !== runId) return;
-    }
-    finish();
-
-    var noEvidence = "I don't have evidence for that in the resume, so I won't guess. Try asking about LangGraph, RAG, AWS, fraud detection, his education, or how to get in touch.";
-    if (announce) liveEl.textContent = outcome.answer || noEvidence;
-    if (!outcome.answer) {
-      await stream(noEvidence, id);
-      return;
-    }
-    await stream(outcome.answer, id);
-    if (id !== runId) return;
-    outcome.sources.forEach(function (chunk, n) {
-      var a = document.createElement('a');
-      a.href = chunk.href;
-      a.textContent = (n ? 'Related: ' : 'Source: ') + chunk.label;
-      citesEl.appendChild(a);
-    });
-  }
-
-  var input = $('#q');
-  $('#ask').addEventListener('submit', function (e) {
-    e.preventDefault();
-    var q = input.value.trim();
-    if (q) run(q, true);
+    track.classList.add('ready');
   });
-  $$('#chips button').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      input.value = btn.textContent;
-      run(btn.textContent, true);
-    });
+  // A logo that fails to load is dropped; the name still reads on its own.
+  $$('.marquee-track img').forEach(function (img) {
+    img.addEventListener('error', function () { img.remove(); });
   });
-
-  // One orchestrated moment on load: run the first question.
-  var first = $('#chips button').textContent;
-  setTimeout(function () { run(first); }, reduceMotion ? 0 : 900);
 })();

@@ -54,22 +54,13 @@
   <main id="main">
     <section class="hero">
       <div class="hero-copy">
-        <div class="identity">
-          <div class="portrait">
-            <img src="assets/profile.jpg" alt="Portrait of Anirudha Sutar" width="480" height="480">
-          </div>
-          <div>
-            <p class="id-name">Anirudha Sutar</p>
-            <p class="id-role">AI Agent Engineer at Insuremo</p>
-            <p class="id-place">
-              <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
-              Pune, India
-            </p>
-          </div>
-        </div>
-
-        <h1>AI agents that show their <span class="mark">evidence</span>.</h1>
-        <p class="lead">I build LangGraph agents, RAG pipelines and graph analytics for insurance and enterprise teams. My systems ground every answer in retrieved records, say so when the evidence is missing, and stay cheap to run.</p>
+        <p class="place">
+          <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Pune, India
+        </p>
+        <p class="hello">Hi, I'm <strong>Anirudha Sutar</strong></p>
+        <h1>I build AI agents that show their <span class="mark">evidence</span>.</h1>
+        <p class="lead">AI Agent Engineer at Insuremo. I ship LangGraph agents, RAG pipelines and graph analytics that ground every answer in retrieved records and say so when the evidence is missing.</p>
 
         <div class="cta">
           <a class="btn" href="assets/Anirudha-Sutar-Resume.pdf" download>
@@ -79,62 +70,83 @@
           <a class="btn btn-ghost" href="#work">See the work</a>
         </div>
 
-        <dl class="facts">
-          <div><dt>2.5+</dt><dd>years building GenAI systems</dd></div>
-          <div><dt>3</dt><dd>agent systems built at Insuremo</dd></div>
-          <div><dt>9.33</dt><dd>CGPA, M.Sc. Data Science</dd></div>
-        </dl>
+        <ul class="hero-links">
+          <li><a href="https://github.com/anirudh6370" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+            GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/anirudha-sutar" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.05c.53-1 1.83-1.8 3.65-1.8 3.9 0 4.5 2.4 4.5 5.6v5.7h-4v-5.05c0-1.2-.02-2.75-1.7-2.75s-1.95 1.3-1.95 2.65v5.15h-4z"/></svg>
+            LinkedIn</a></li>
+          <li><a href="mailto:sutaranirudha604@gmail.com">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3.5 6.5h17v11h-17zM4 7l8 6.5L20 7"/></svg>
+            Email</a></li>
+        </ul>
       </div>
 
-      <div class="agent" id="agent">
-        <div class="agent-head">
-          <h2>Ask my resume</h2>
-          <p>Type any question. A route, retrieve, grade and rewrite loop searches my resume in your browser and quotes what it finds. There is no AI model behind it, so it says "no evidence" instead of guessing.</p>
+      <div class="hero-visual">
+        <div class="visual-box">
+        <div class="orbit">
+          <span class="glow" aria-hidden="true"></span>
+          <span class="ring ring-a" aria-hidden="true"></span>
+          <span class="ring ring-b" aria-hidden="true"></span>
+          <div class="portrait">
+            <img src="assets/profile.jpg" alt="Portrait of Anirudha Sutar" width="612" height="612">
+          </div>
         </div>
-
-        <svg class="graph" viewBox="0 0 506 190" role="img" aria-label="Agent graph: route, retrieve, grade, then generate. Weak evidence loops through rewrite, or ends at no evidence.">
-          <g class="edges" fill="none">
-            <path data-edge="route-retrieve" d="M106 38H140"/>
-            <path data-edge="retrieve-grade" d="M236 38H270"/>
-            <path data-edge="grade-generate" d="M366 38H400"/>
-            <path data-edge="grade-rewrite" d="M306 58V146H286"/>
-            <path data-edge="rewrite-retrieve" d="M190 146H176V58"/>
-            <path data-edge="grade-none" d="M342 58V100H448V126"/>
-          </g>
-          <g class="node" data-node="route"><rect x="10" y="18" width="96" height="40" rx="12"/><text x="58" y="43">route</text></g>
-          <g class="node" data-node="retrieve"><rect x="140" y="18" width="96" height="40" rx="12"/><text x="188" y="43">retrieve</text></g>
-          <g class="node" data-node="grade"><rect x="270" y="18" width="96" height="40" rx="12"/><text x="318" y="43">grade</text></g>
-          <g class="node" data-node="generate"><rect x="400" y="18" width="96" height="40" rx="12"/><text x="448" y="43">generate</text></g>
-          <g class="node" data-node="rewrite"><rect x="190" y="126" width="96" height="40" rx="12"/><text x="238" y="151">rewrite</text></g>
-          <g class="node" data-node="none"><rect x="384" y="126" width="112" height="40" rx="12"/><text x="440" y="151">no evidence</text></g>
-        </svg>
-
-        <ol class="trace" id="trace" aria-label="Run trace"></ol>
-
-        <div class="answer" id="answer">
-          <p id="answer-text"></p>
-          <div class="cites" id="cites"></div>
-          <p class="sr" id="answer-live" aria-live="polite"></p>
+          <ul class="floats">
+            <li class="float float-a"><strong>40%</strong><span>less manual mapping effort at Insuremo</span></li>
+            <li class="float float-b"><strong>2.5+</strong><span>years building GenAI systems</span></li>
+            <li class="float float-c"><strong>9.33</strong><span>CGPA, M.Sc. Data Science</span></li>
+          </ul>
         </div>
+      </div>
+    </section>
 
-        <form class="ask" id="ask" autocomplete="off">
-          <label class="sr" for="q">Ask a question about Anirudha</label>
-          <input id="q" name="q" type="text" maxlength="120" placeholder="Ask about RAG, AWS, fraud detection…">
-          <button class="btn btn-small" type="submit">Ask</button>
-        </form>
-        <div class="chips" id="chips">
-          <button type="button">What has he built with LangGraph?</button>
-          <button type="button">What is his current role?</button>
-          <button type="button">Where did he study?</button>
-          <button type="button">Does he know Kubernetes?</button>
-        </div>
+    <section class="stack" aria-labelledby="stack-title">
+      <h2 class="stack-title" id="stack-title">The stack I work in</h2>
+      <div class="marquee">
+        <ul class="marquee-track" style="--dur: 48s">
+          <li><span class="tile" aria-hidden="true">LG</span>LangGraph</li>
+          <li><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/langchain.svg" alt="" width="24" height="24" loading="lazy">LangChain</li>
+          <li><span class="tile" aria-hidden="true">P</span>Pinecone</li>
+          <li><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/opensearch.svg" alt="" width="24" height="24" loading="lazy">OpenSearch</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/neo4j/neo4j-original.svg" alt="" width="24" height="24" loading="lazy">Neo4j</li>
+          <li><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/huggingface.svg" alt="" width="24" height="24" loading="lazy">Hugging Face</li>
+          <li><span class="tile" aria-hidden="true">G</span>Groq</li>
+          <li><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/ollama.svg" alt="" width="24" height="24" loading="lazy">Ollama</li>
+          <li><span class="tile" aria-hidden="true">LS</span>LangSmith</li>
+          <li><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/pydantic.svg" alt="" width="24" height="24" loading="lazy">Pydantic</li>
+          <li><span class="tile" aria-hidden="true">CD</span>ChromaDB</li>
+          <li><img class="mono" src="https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/claude.svg" alt="" width="24" height="24" loading="lazy">Claude Code</li>
+          <li><span class="tile" aria-hidden="true">FA</span>FAISS</li>
+          <li><span class="tile" aria-hidden="true">T</span>Tavily</li>
+        </ul>
+      </div>
+      <div class="marquee">
+        <ul class="marquee-track" style="--dur: 60s">
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/python/python-original.svg" alt="" width="24" height="24" loading="lazy">Python</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/fastapi/fastapi-original.svg" alt="" width="24" height="24" loading="lazy">FastAPI</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/redis/redis-original.svg" alt="" width="24" height="24" loading="lazy">Redis</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/docker/docker-original.svg" alt="" width="24" height="24" loading="lazy">Docker</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="24" height="24" loading="lazy">AWS</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/pytorch/pytorch-original.svg" alt="" width="24" height="24" loading="lazy">PyTorch</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/tensorflow/tensorflow-original.svg" alt="" width="24" height="24" loading="lazy">TensorFlow</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/scikitlearn/scikitlearn-original.svg" alt="" width="24" height="24" loading="lazy">Scikit-learn</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/opencv/opencv-original.svg" alt="" width="24" height="24" loading="lazy">OpenCV</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/mysql/mysql-original.svg" alt="" width="24" height="24" loading="lazy">MySQL</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/sqlite/sqlite-original.svg" alt="" width="24" height="24" loading="lazy">SQLite</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/git/git-original.svg" alt="" width="24" height="24" loading="lazy">Git</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/githubactions/githubactions-original.svg" alt="" width="24" height="24" loading="lazy">GitHub Actions</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/react/react-original.svg" alt="" width="24" height="24" loading="lazy">React</li>
+          <li><img src="https://cdn.jsdelivr.net/npm/devicon@2.16.0/icons/streamlit/streamlit-original.svg" alt="" width="24" height="24" loading="lazy">Streamlit</li>
+        </ul>
       </div>
     </section>
 
     <section id="work" class="band">
       <div class="section-head">
         <h2>Experience</h2>
-        <p>Each card reads the same way: the problem, what I built, and what changed.</p>
+        <p>Five systems across two roles. The Insuremo cards read the same way: the problem, what I built, and what changed.</p>
       </div>
 
       <div class="job">
@@ -270,21 +282,58 @@
           <p class="when">Apr 2024 to Mar 2025</p>
         </header>
 
-        <article class="card hue-plum">
+        <article class="card hue-mint">
           <header class="card-head">
             <span class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9M12 12c0-4 3-7 8-7 0 5-3 8-8 7zM12 15c0-3-2-5-7-5 0 4 3 6 7 5z"/></svg>
             </span>
             <div class="card-title">
-              <h4>Computer vision for agriculture</h4>
-              <p>Model training and delivery</p>
+              <h4>LeafCure</h4>
+              <p>Plant disease detection with a guidance chatbot</p>
             </div>
           </header>
           <dl class="story story-wide">
-            <div><dt>What I built</dt><dd>Computer vision applications for the agriculture sector, using TensorFlow, scikit-learn and transfer learning on pretrained VGG and Xception models.</dd></div>
-            <div><dt>How it shipped</dt><dd>Models reached users through a FastAPI inference backend and a React frontend, which streamlined the interface and data processing.</dd></div>
+            <div><dt>What we built</dt><dd>An application for agriculture that detects plant disease from a photo of a leaf using computer vision.</dd></div>
+            <div><dt>How it works</dt><dd>Once the disease is identified from the image, a chatbot explains the likely reason for it, the precautions to take and the cure.</dd></div>
           </dl>
-          <ul class="tags"><li>TensorFlow</li><li>Transfer learning</li><li>Scikit-learn</li><li>FastAPI</li><li>React</li></ul>
+          <ol class="flow" aria-label="Pipeline">
+            <li>Leaf photo</li>
+            <li>Disease detection model</li>
+            <li>Chatbot</li>
+            <li>Reason, precautions, cure</li>
+          </ol>
+          <details>
+            <summary>Engineering details</summary>
+            <ul>
+              <li>Models trained with TensorFlow and scikit-learn, using transfer learning on pretrained VGG and Xception networks.</li>
+              <li>Delivered to users through a FastAPI inference backend and a React frontend.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>Computer vision</li><li>TensorFlow</li><li>Transfer learning</li><li>FastAPI</li><li>React</li></ul>
+        </article>
+
+        <article class="card hue-plum">
+          <header class="card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10 5 7.5 4.5 4 4.5v13c3.5 0 6 .5 8 2 2-1.5 4.5-2 8-2v-13c-3.5 0-6 .5-8 2zM12 6.5v13"/></svg>
+            </span>
+            <div class="card-title">
+              <h4>Indology book assistant</h4>
+              <p>RAG with a reranker over Indology texts</p>
+            </div>
+          </header>
+          <dl class="story story-wide">
+            <div><dt>What we built</dt><dd>A question-answering application over Indology-related books, built as a simple RAG pipeline with a reranker.</dd></div>
+            <div><dt>How it works</dt><dd>Books are chunked with their metadata kept alongside each chunk. Embeddings live in Pinecone, semantic retrieval finds candidates, the reranker orders them, and an LLM writes the answer.</dd></div>
+          </dl>
+          <ol class="flow flow-5" aria-label="Pipeline">
+            <li>Chunk books with metadata</li>
+            <li>Embed into Pinecone</li>
+            <li>Semantic retrieval</li>
+            <li>Rerank</li>
+            <li>LLM answer</li>
+          </ol>
+          <ul class="tags"><li>RAG</li><li>Reranker</li><li>Pinecone</li><li>Semantic retrieval</li><li>Chunking</li><li>Metadata</li></ul>
         </article>
       </div>
     </section>
@@ -344,7 +393,7 @@
       </div>
       <dl class="skills">
         <div><dt>AI agents and LLMs</dt><dd><ul class="tags"><li class="core">LangGraph</li><li class="core">AI agents</li><li class="core">Prompt engineering</li><li>LangChain</li><li>Agentic workflows</li><li>Multi-agent orchestration</li><li>Tool and function calling</li><li>MCP</li><li>Structured outputs</li><li>Conversation memory</li><li>Groq</li><li>Ollama</li></ul></dd></div>
-        <div><dt>RAG and retrieval</dt><dd><ul class="tags"><li class="core">RAG</li><li class="core">Hybrid search (BM25 + semantic)</li><li class="core">OpenSearch</li><li>Agentic RAG</li><li>Corrective RAG</li><li>Query rewriting</li><li>Embeddings</li><li>Pinecone</li><li>ChromaDB</li><li>FAISS</li><li>Sentence-Transformers</li><li>Tavily</li></ul></dd></div>
+        <div><dt>RAG and retrieval</dt><dd><ul class="tags"><li class="core">RAG</li><li class="core">Hybrid search (BM25 + semantic)</li><li class="core">OpenSearch</li><li class="core">Pinecone</li><li class="core">Reranking</li><li>Agentic RAG</li><li>Corrective RAG</li><li>Query rewriting</li><li>Embeddings</li><li>ChromaDB</li><li>FAISS</li><li>Sentence-Transformers</li><li>Tavily</li></ul></dd></div>
         <div><dt>LLMOps and quality</dt><dd><ul class="tags"><li class="core">LangSmith tracing</li><li class="core">Token and cost optimisation</li><li class="core">Response caching</li><li>LLM observability</li><li>Evidence grading</li><li>Hallucination mitigation</li><li>Audit logging</li></ul></dd></div>
         <div><dt>Backend and data</dt><dd><ul class="tags"><li class="core">Python</li><li class="core">FastAPI</li><li class="core">Redis</li><li class="core">Neo4j GDS</li><li class="core">Document intelligence</li><li>REST APIs</li><li>Pydantic</li><li>Streamlit</li><li>SQL</li><li>MySQL</li><li>SQLite</li></ul></dd></div>
         <div><dt>Cloud and DevOps</dt><dd><ul class="tags"><li>AWS EC2</li><li>AWS S3</li><li>AWS Lambda</li><li>Docker</li><li>Git</li><li>GitHub Actions</li><li>CI/CD</li><li>Claude Code</li></ul></dd></div>
@@ -390,7 +439,6 @@
     <a href="#top">Back to top</a>
   </footer>
 
-  <script src="js/resume-search.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

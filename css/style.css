@@ -235,7 +235,7 @@ h1 {
 }
 .hero-links a:hover { color: var(--blue-text); transform: translateY(-1px); }
 
-/* Portrait with orbiting rings and three floating facts */
+/* Portrait with orbiting rings */
 .hero-visual { display: grid; place-items: center; min-width: 0; }
 .visual-box { position: relative; width: min(100%, 460px); }
 .orbit { position: relative; width: 100%; aspect-ratio: 1; display: grid; place-items: center; }
@@ -267,24 +267,6 @@ h1 {
   border: 5px solid var(--surface); background: var(--sunken);
 }
 
-.float {
-  position: absolute; display: flex; align-items: center; gap: 10px; max-width: 210px;
-  padding: 10px 16px 10px 12px; border-radius: 18px;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border: 1px solid var(--line); box-shadow: var(--shadow);
-  animation: bob 6s ease-in-out infinite;
-}
-.float strong { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; font-variant-numeric: tabular-nums; }
-.float span { font-size: 0.82rem; font-weight: 500; line-height: 1.25; color: var(--muted); }
-.float-a { top: 2%; left: -6%; }
-.float-a strong { color: var(--blue-text); }
-.float-b { top: 52%; right: -9%; animation-delay: -2s; }
-.float-b strong { color: var(--coral-text); }
-.float-c { bottom: 2%; left: 0; animation-delay: -4s; }
-.float-c strong { color: var(--mint-text); }
-@keyframes bob { 50% { transform: translateY(-8px); } }
-
 .hero-copy > * { animation: rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .hero-copy > :nth-child(2) { animation-delay: 0.06s; }
 .hero-copy > :nth-child(3) { animation-delay: 0.12s; }
@@ -300,14 +282,6 @@ h1 {
   .hero-visual { order: -1; }
   .visual-box { width: min(100%, 420px); }
   .orbit { width: min(72%, 280px); margin: 0 auto; }
-  /* On small screens the facts sit in a row under the portrait instead of over it */
-  .floats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
-  .float {
-    position: static; max-width: none; flex-direction: column; align-items: flex-start; gap: 4px;
-    padding: 10px 12px; animation: none;
-  }
-  .float strong { font-size: 1.35rem; }
-  .float span { font-size: 0.78rem; }
 }
 @media (max-width: 460px) {
   .cta .btn { flex: 1 1 100%; }
@@ -594,7 +568,7 @@ details li::before, .points li::before {
 }
 
 @media print {
-  .nav, .progress, .stack, .floats, .footer a { display: none; }
+  .nav, .progress, .stack, .footer a { display: none; }
   .hero { grid-template-columns: 1fr; }
   body::before { display: none; }
 }

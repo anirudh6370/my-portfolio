@@ -8,13 +8,15 @@
   <meta property="og:title" content="Anirudha Sutar | AI Agent Engineer">
   <meta property="og:description" content="LangGraph agents, RAG pipelines and graph analytics that show their evidence.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#2742F5">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232742F5'/%3E%3Ccircle cx='9' cy='22' r='3.5' fill='%23C8F03C'/%3E%3Ccircle cx='23' cy='10' r='3.5' fill='%23fff'/%3E%3Cpath d='M11.5 19.5 20.5 12.5' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E">
+  <meta property="og:url" content="https://anirudh6370.github.io/my-portfolio/">
+  <meta property="og:image" content="https://anirudh6370.github.io/my-portfolio/assets/profile.jpg">
+  <meta name="theme-color" content="#3B2FE0">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233B2FE0'/%3E%3Cpath d='M11.5 19.5 20.5 12.5' stroke='%23fff' stroke-width='2'/%3E%3Ccircle cx='9' cy='22' r='3.5' fill='%23FF7A3D'/%3E%3Ccircle cx='23' cy='10' r='3.5' fill='%23fff'/%3E%3C/svg%3E">
   <script>
-    // Apply the saved theme before first paint to avoid a flash.
+    // Light is the default. Apply a saved choice before first paint to avoid a flash.
+    document.documentElement.classList.add('js');
     try {
-      var t = localStorage.getItem('theme');
-      if (t) document.documentElement.setAttribute('data-theme', t);
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
     } catch (e) {}
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,12 +30,7 @@
 
   <header class="nav" id="top">
     <a class="brand" href="#top" aria-label="Anirudha Sutar, back to top">
-      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
-        <rect width="32" height="32" rx="8" class="brand-bg"/>
-        <path d="M11.5 19.5 20.5 12.5" stroke="#fff" stroke-width="2"/>
-        <circle cx="9" cy="22" r="3.5" fill="#C8F03C"/>
-        <circle cx="23" cy="10" r="3.5" fill="#fff"/>
-      </svg>
+      <img src="assets/profile.jpg" alt="" width="34" height="34">
       <span>Anirudha Sutar</span>
     </a>
     <nav aria-label="Sections">
@@ -46,47 +43,70 @@
       </ul>
     </nav>
     <div class="nav-actions">
-      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch colour theme">
-        <svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
+      <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
         <svg class="moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg>
       </button>
-      <a class="btn btn-small" href="assets/Anirudha-Sutar-Resume.pdf" download>Resume</a>
+      <a class="btn btn-small" href="mailto:sutaranirudha604@gmail.com">Email me</a>
     </div>
   </header>
 
   <main id="main">
     <section class="hero">
       <div class="hero-copy">
-        <p class="hello">Anirudha Sutar, AI Agent Engineer in Pune</p>
-        <h1>AI agents that show their <span class="mark">evidence</span>.</h1>
-        <p class="lead">For 2.5+ years I've built LangGraph agents, RAG pipelines and graph analytics for insurance and enterprise teams. The systems I ship ground every answer in retrieved records, say so when the evidence is missing, and stay cheap to run.</p>
-        <div class="cta">
-          <a class="btn" href="#work">See the work</a>
-          <a class="btn btn-ghost" href="mailto:sutaranirudha604@gmail.com">Email me</a>
+        <div class="identity">
+          <div class="portrait">
+            <img src="assets/profile.jpg" alt="Portrait of Anirudha Sutar" width="480" height="480">
+          </div>
+          <div>
+            <p class="id-name">Anirudha Sutar</p>
+            <p class="id-role">AI Agent Engineer at Insuremo</p>
+            <p class="id-place">
+              <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Pune, India
+            </p>
+          </div>
         </div>
+
+        <h1>AI agents that show their <span class="mark">evidence</span>.</h1>
+        <p class="lead">I build LangGraph agents, RAG pipelines and graph analytics for insurance and enterprise teams. My systems ground every answer in retrieved records, say so when the evidence is missing, and stay cheap to run.</p>
+
+        <div class="cta">
+          <a class="btn" href="assets/Anirudha-Sutar-Resume.pdf" download>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14"/></svg>
+            Download resume
+          </a>
+          <a class="btn btn-ghost" href="#work">See the work</a>
+        </div>
+
+        <dl class="facts">
+          <div><dt>2.5+</dt><dd>years building GenAI systems</dd></div>
+          <div><dt>3</dt><dd>agent systems built at Insuremo</dd></div>
+          <div><dt>9.33</dt><dd>CGPA, M.Sc. Data Science</dd></div>
+        </dl>
       </div>
 
       <div class="agent" id="agent">
         <div class="agent-head">
           <h2>Ask my resume</h2>
-          <p>This is the corrective RAG loop I build, in miniature. Retrieval is real BM25 running in your browser. No LLM is called, so answers are quoted from the resume.</p>
+          <p>Type any question. This panel runs the same route, retrieve, grade and rewrite loop I build for clients, using keyword search in your browser. It quotes the resume and has no AI model behind it, so it says "no evidence" instead of guessing.</p>
         </div>
 
-        <svg class="graph" viewBox="0 0 506 200" role="img" aria-label="Agent graph: route, retrieve, grade, then generate. Weak evidence loops through rewrite, or ends at no evidence.">
+        <svg class="graph" viewBox="0 0 506 190" role="img" aria-label="Agent graph: route, retrieve, grade, then generate. Weak evidence loops through rewrite, or ends at no evidence.">
           <g class="edges" fill="none">
-            <path data-edge="route-retrieve" d="M106 44H140"/>
-            <path data-edge="retrieve-grade" d="M236 44H270"/>
-            <path data-edge="grade-generate" d="M366 44H400"/>
-            <path data-edge="grade-rewrite" d="M306 62V150H286"/>
-            <path data-edge="rewrite-retrieve" d="M190 150H176V62"/>
-            <path data-edge="grade-none" d="M342 62V106H448V132"/>
+            <path data-edge="route-retrieve" d="M106 38H140"/>
+            <path data-edge="retrieve-grade" d="M236 38H270"/>
+            <path data-edge="grade-generate" d="M366 38H400"/>
+            <path data-edge="grade-rewrite" d="M306 58V146H286"/>
+            <path data-edge="rewrite-retrieve" d="M190 146H176V58"/>
+            <path data-edge="grade-none" d="M342 58V100H448V126"/>
           </g>
-          <g class="node" data-node="route"><rect x="10" y="26" width="96" height="36" rx="10"/><text x="58" y="49">route</text></g>
-          <g class="node" data-node="retrieve"><rect x="140" y="26" width="96" height="36" rx="10"/><text x="188" y="49">retrieve</text></g>
-          <g class="node" data-node="grade"><rect x="270" y="26" width="96" height="36" rx="10"/><text x="318" y="49">grade</text></g>
-          <g class="node" data-node="generate"><rect x="400" y="26" width="96" height="36" rx="10"/><text x="448" y="49">generate</text></g>
-          <g class="node" data-node="rewrite"><rect x="190" y="132" width="96" height="36" rx="10"/><text x="238" y="155">rewrite</text></g>
-          <g class="node" data-node="none"><rect x="388" y="132" width="108" height="36" rx="10"/><text x="442" y="155">no evidence</text></g>
+          <g class="node" data-node="route"><rect x="10" y="18" width="96" height="40" rx="12"/><text x="58" y="43">route</text></g>
+          <g class="node" data-node="retrieve"><rect x="140" y="18" width="96" height="40" rx="12"/><text x="188" y="43">retrieve</text></g>
+          <g class="node" data-node="grade"><rect x="270" y="18" width="96" height="40" rx="12"/><text x="318" y="43">grade</text></g>
+          <g class="node" data-node="generate"><rect x="400" y="18" width="96" height="40" rx="12"/><text x="448" y="43">generate</text></g>
+          <g class="node" data-node="rewrite"><rect x="190" y="126" width="96" height="40" rx="12"/><text x="238" y="151">rewrite</text></g>
+          <g class="node" data-node="none"><rect x="384" y="126" width="112" height="40" rx="12"/><text x="440" y="151">no evidence</text></g>
         </svg>
 
         <ol class="trace" id="trace" aria-label="Run trace"></ol>
@@ -98,12 +118,12 @@
 
         <form class="ask" id="ask" autocomplete="off">
           <label class="sr" for="q">Ask a question about Anirudha</label>
-          <input id="q" name="q" type="text" maxlength="120" placeholder="Ask about RAG, fraud detection, education…">
-          <button class="btn btn-small" type="submit">Run</button>
+          <input id="q" name="q" type="text" maxlength="120" placeholder="Ask about RAG, AWS, fraud detection…">
+          <button class="btn btn-small" type="submit">Ask</button>
         </form>
         <div class="chips" id="chips">
           <button type="button">What has he built with LangGraph?</button>
-          <button type="button">How did he detect insurance fraud?</button>
+          <button type="button">What is his current role?</button>
           <button type="button">Where did he study?</button>
           <button type="button">Does he know Kubernetes?</button>
         </div>
@@ -113,7 +133,7 @@
     <section id="work" class="band">
       <div class="section-head">
         <h2>Experience</h2>
-        <p>Three production systems at Insuremo, and computer vision before that.</p>
+        <p>Each card reads the same way: the problem, what I built, and what changed.</p>
       </div>
 
       <div class="job">
@@ -122,73 +142,124 @@
           <p class="when">Apr 2025 to present</p>
         </header>
 
-        <article class="case">
-          <div class="metric"><strong data-count="40">40</strong><span>% less manual mapping effort (estimated)</span></div>
-          <div class="case-body">
-            <h4>MMV mapping system for motor insurance</h4>
-            <p>Every insurer writes Make, Model and Variant differently. This LangGraph service standardises vehicle records across insurers and grounds each match in verified vehicle data.</p>
-            <ol class="flow" aria-label="Pipeline">
-              <li>Insurer record</li>
-              <li>BM25 + semantic search</li>
-              <li>LLM match over candidates</li>
-              <li>Redis cache</li>
-            </ol>
-            <details>
-              <summary>How it works</summary>
-              <ul>
-                <li>Hybrid retrieval combines BM25 keyword search with semantic vector search over an OpenSearch vector database, so the LLM picks from accurate candidates.</li>
-                <li>Match responses are cached in Redis, so repeated queries skip retrieval and LLM calls. Latency and token cost both drop.</li>
-                <li>LangSmith tracks outputs and token usage. A fast, cost-efficient model and compacted prompts cut context size without losing match accuracy.</li>
-                <li>Strict and relaxed match thresholds are configurable.</li>
-              </ul>
-            </details>
-            <ul class="tags"><li>LangGraph</li><li>RAG</li><li>OpenSearch</li><li>Redis</li><li>LangSmith</li></ul>
+        <article class="card hue-blue">
+          <header class="card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16v-3l2-5h12l2 5v3M4 16h16M4 16v2m16-2v2M3 12h18"/><circle cx="7.5" cy="14" r=".6" fill="currentColor"/><circle cx="16.5" cy="14" r=".6" fill="currentColor"/></svg>
+            </span>
+            <div class="card-title">
+              <h4>MMV mapping system</h4>
+              <p>Motor insurance</p>
+            </div>
+            <p class="card-metric"><strong><span data-count="40">40</span>%</strong> less manual mapping</p>
+          </header>
+
+          <div class="card-grid">
+            <dl class="story">
+              <div><dt>Problem</dt><dd>Insurers describe the same vehicle in inconsistent Make, Model and Variant formats, so matching records across insurers took manual work.</dd></div>
+              <div><dt>What I built</dt><dd>A LangGraph service that finds candidate vehicles with hybrid BM25 and semantic search over OpenSearch, then has an LLM pick the match from verified records.</dd></div>
+              <div><dt>Result</dt><dd>An estimated 40% less manual mapping effort. Repeat queries are served from a Redis cache, which lowers latency and token cost.</dd></div>
+            </dl>
+            <figure class="bars">
+              <figcaption>Manual mapping effort, estimated</figcaption>
+              <div class="bar"><span>Before</span><div class="track"><i style="--w:100%"></i></div><b>100%</b></div>
+              <div class="bar after"><span>After</span><div class="track"><i style="--w:60%"></i></div><b>60%</b></div>
+            </figure>
           </div>
+
+          <ol class="flow" aria-label="Pipeline">
+            <li>Insurer record</li>
+            <li>BM25 + semantic search</li>
+            <li>LLM match over candidates</li>
+            <li>Redis cache</li>
+          </ol>
+
+          <details>
+            <summary>Engineering details</summary>
+            <ul>
+              <li>Hybrid retrieval combines BM25 keyword search with semantic vector search over an OpenSearch vector database, so the LLM picks from accurate candidates.</li>
+              <li>LangSmith tracks outputs and token usage. A fast, cost-efficient model and compacted prompts cut context size without losing match accuracy.</li>
+              <li>Strict and relaxed match thresholds are configurable.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>LangGraph</li><li>RAG</li><li>OpenSearch</li><li>Redis</li><li>LangSmith</li><li>Prompt engineering</li></ul>
         </article>
 
-        <article class="case">
-          <div class="metric"><strong data-count="30">30</strong><span>% fewer false-positive manual reviews (estimated)</span></div>
-          <div class="case-body">
-            <h4>Fraud and collusion detection in claims</h4>
-            <p>Claims, claimants, garages and repair entities modelled as a knowledge graph in Neo4j, so collusion rings show up as communities instead of isolated rows.</p>
-            <ol class="flow" aria-label="Pipeline">
-              <li>Claims knowledge graph</li>
-              <li>WCC + Leiden communities</li>
-              <li>Multi-signal fraud checks</li>
-              <li>Agent explanation</li>
-            </ol>
-            <details>
-              <summary>How it works</summary>
-              <ul>
-                <li>WCC and Leiden community detection in Neo4j Graph Data Science surface collusion networks across 10K+ synthetic claim records.</li>
-                <li>Fraud signals layered on the graph: narrative-to-damage mismatches, overcharged parts and invoice inconsistencies.</li>
-                <li>LangGraph agents run the pipeline end to end and write natural-language explanations, so non-technical reviewers can read why a claim was flagged.</li>
-              </ul>
-            </details>
-            <ul class="tags"><li>Neo4j GDS</li><li>LangGraph</li><li>Python</li><li>AI agents</li></ul>
+        <article class="card hue-coral">
+          <header class="card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7.5 7.5 11 11m2.5 1.5 3.5 3M8 16.5l3-3.5m2.5-2.5 3-3"/><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="12" cy="12" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/></svg>
+            </span>
+            <div class="card-title">
+              <h4>Fraud and collusion detection</h4>
+              <p>Insurance claims</p>
+            </div>
+            <p class="card-metric"><strong><span data-count="30">30</span>%</strong> fewer false-positive reviews</p>
+          </header>
+
+          <div class="card-grid">
+            <dl class="story">
+              <div><dt>Problem</dt><dd>Collusion between claimants, garages and repair shops is hard to see when claims are reviewed one at a time.</dd></div>
+              <div><dt>What I built</dt><dd>A Neo4j knowledge graph of claims, claimants, garages and repair entities, with WCC and Leiden community detection plus fraud signals layered on top.</dd></div>
+              <div><dt>Result</dt><dd>Collusion networks surfaced across 10K+ synthetic claim records, with an estimated 30% fewer false-positive manual reviews.</dd></div>
+            </dl>
+            <figure class="bars">
+              <figcaption>False-positive manual reviews, estimated</figcaption>
+              <div class="bar"><span>Before</span><div class="track"><i style="--w:100%"></i></div><b>100%</b></div>
+              <div class="bar after"><span>After</span><div class="track"><i style="--w:70%"></i></div><b>70%</b></div>
+            </figure>
           </div>
+
+          <ol class="flow" aria-label="Pipeline">
+            <li>Claims knowledge graph</li>
+            <li>WCC + Leiden communities</li>
+            <li>Multi-signal fraud checks</li>
+            <li>Agent explanation</li>
+          </ol>
+
+          <details>
+            <summary>Engineering details</summary>
+            <ul>
+              <li>Community detection runs in Neo4j Graph Data Science.</li>
+              <li>Fraud signals include narrative-to-damage mismatches, overcharged parts and invoice inconsistencies.</li>
+              <li>LangGraph agents run the pipeline end to end and write natural-language explanations, so non-technical reviewers can read why a claim was flagged.</li>
+            </ul>
+          </details>
+          <ul class="tags"><li>Neo4j GDS</li><li>LangGraph</li><li>Python</li><li>AI agents</li></ul>
         </article>
 
-        <article class="case">
-          <div class="metric"><strong data-count="30">30</strong><span>% less manual policy-generation effort (estimated)</span></div>
-          <div class="case-body">
-            <h4>Policy document template generation</h4>
-            <p>An agent-driven document intelligence pipeline that turns static insurance policy documents into dynamic, tag-based templates.</p>
-            <ol class="flow" aria-label="Pipeline">
-              <li>Static policy document</li>
-              <li>Field extraction</li>
-              <li>Dynamic tagging (Aspose)</li>
-              <li>Auto-filled template</li>
-            </ol>
-            <details>
-              <summary>How it works</summary>
-              <ul>
-                <li>Prompt engineering extracts structured fields from unstructured source documents.</li>
-                <li>Dynamic tags auto-populate templates from structured policy objects.</li>
-              </ul>
-            </details>
-            <ul class="tags"><li>AI agents</li><li>Aspose</li><li>Document parsing</li></ul>
+        <article class="card hue-mint">
+          <header class="card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></svg>
+            </span>
+            <div class="card-title">
+              <h4>Policy document template generation</h4>
+              <p>Document intelligence</p>
+            </div>
+            <p class="card-metric"><strong><span data-count="30">30</span>%</strong> less manual policy work</p>
+          </header>
+
+          <div class="card-grid">
+            <dl class="story">
+              <div><dt>Problem</dt><dd>Insurance policy documents were static files, so producing each new policy document took manual effort.</dd></div>
+              <div><dt>What I built</dt><dd>An agent-driven pipeline that extracts structured fields from unstructured documents and converts them into dynamic, tag-based templates with Aspose.</dd></div>
+              <div><dt>Result</dt><dd>Templates now fill themselves from structured policy objects, cutting manual policy-generation effort by an estimated 30%.</dd></div>
+            </dl>
+            <figure class="bars">
+              <figcaption>Manual policy-generation effort, estimated</figcaption>
+              <div class="bar"><span>Before</span><div class="track"><i style="--w:100%"></i></div><b>100%</b></div>
+              <div class="bar after"><span>After</span><div class="track"><i style="--w:70%"></i></div><b>70%</b></div>
+            </figure>
           </div>
+
+          <ol class="flow" aria-label="Pipeline">
+            <li>Static policy document</li>
+            <li>Field extraction</li>
+            <li>Dynamic tagging (Aspose)</li>
+            <li>Auto-filled template</li>
+          </ol>
+          <ul class="tags"><li>AI agents</li><li>Aspose</li><li>Document parsing</li><li>Dynamic tagging</li></ul>
         </article>
       </div>
 
@@ -197,10 +268,23 @@
           <h3>AI Engineer <span>at AppNAI</span></h3>
           <p class="when">Apr 2024 to Mar 2025</p>
         </header>
-        <div class="job-plain">
-          <p>Computer vision for agriculture. I trained models with TensorFlow, scikit-learn and transfer learning on pretrained VGG and Xception networks, then delivered them to users through a FastAPI inference backend and a React frontend.</p>
-          <ul class="tags"><li>TensorFlow</li><li>Transfer learning</li><li>FastAPI</li><li>React</li></ul>
-        </div>
+
+        <article class="card hue-plum">
+          <header class="card-head">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21v-9M12 12c0-4 3-7 8-7 0 5-3 8-8 7zM12 15c0-3-2-5-7-5 0 4 3 6 7 5z"/></svg>
+            </span>
+            <div class="card-title">
+              <h4>Computer vision for agriculture</h4>
+              <p>Model training and delivery</p>
+            </div>
+          </header>
+          <dl class="story story-wide">
+            <div><dt>What I built</dt><dd>Computer vision applications for the agriculture sector, using TensorFlow, scikit-learn and transfer learning on pretrained VGG and Xception models.</dd></div>
+            <div><dt>How it shipped</dt><dd>Models reached users through a FastAPI inference backend and a React frontend, which streamlined the interface and data processing.</dd></div>
+          </dl>
+          <ul class="tags"><li>TensorFlow</li><li>Transfer learning</li><li>Scikit-learn</li><li>FastAPI</li><li>React</li></ul>
+        </article>
       </div>
     </section>
 
@@ -216,10 +300,10 @@
           <h3>SunDesk Copilot</h3>
           <p>An agentic RAG support assistant that corrects itself. A stateful LangGraph workflow routes each query, retrieves from Pinecone, has the LLM grade the evidence, and falls back to web search or a rewritten query when the evidence is weak.</p>
           <ul class="points">
-            <li>Generates only from graded evidence, with source citations. Web-sourced answers are labelled, and thin evidence returns an explicit "insufficient evidence" response.</li>
+            <li>Generates only from graded evidence, with source citations. Thin evidence returns an explicit "insufficient evidence" response.</li>
             <li>Multi-turn memory with per-thread SQLite checkpointing and history-aware query rewriting.</li>
             <li>Pydantic structured outputs for routing and grading, LangSmith tracing, and a SQLite audit log.</li>
-            <li>Ingests PDF, DOCX and Markdown with local sentence-transformers embeddings. Ships as a FastAPI REST API and a Streamlit chat UI.</li>
+            <li>Ingests PDF, DOCX and Markdown. Ships as a FastAPI REST API and a Streamlit chat UI.</li>
           </ul>
           <ul class="tags"><li>LangGraph</li><li>Groq</li><li>Pinecone</li><li>Tavily</li><li>FastAPI</li><li>Streamlit</li><li>Docker</li></ul>
           <a class="btn btn-small" href="https://github.com/anirudh6370/Sundesk-Copilot" target="_blank" rel="noopener">View code on GitHub</a>
@@ -233,31 +317,37 @@
         </ol>
       </article>
 
-      <article class="side-project">
-        <div>
-          <p class="when">Dec 2023</p>
-          <h3>Early Alzheimer's diagnosis from brain MRI</h3>
-        </div>
-        <div>
-          <p>A detection model using VGG16 feature extraction and CNN classification. Preprocessing applies Gaussian blurring and skull stripping, and class balancing plus data augmentation improve early-stage detection.</p>
-          <ul class="tags"><li>OpenCV</li><li>VGG16</li><li>CNN</li></ul>
+      <article class="card hue-coral side-project">
+        <header class="card-head">
+          <span class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 0V7a3 3 0 0 0-3-3zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 0"/></svg>
+          </span>
+          <div class="card-title">
+            <h4>Early Alzheimer's diagnosis from brain MRI</h4>
+            <p>Dec 2023</p>
+          </div>
           <a class="text-link" href="https://github.com/anirudh6370/Early-detection-of-Alzheimer-disease-using-brain-MRI-images" target="_blank" rel="noopener">View code on GitHub</a>
-        </div>
+        </header>
+        <dl class="story story-wide">
+          <div><dt>What I built</dt><dd>A detection model on brain MRI images that uses VGG16 feature extraction and CNN classification.</dd></div>
+          <div><dt>How</dt><dd>Preprocessing applies Gaussian blurring and skull stripping. Class balancing and data augmentation improve early-stage detection.</dd></div>
+        </dl>
+        <ul class="tags"><li>OpenCV</li><li>VGG16</li><li>CNN</li></ul>
       </article>
     </section>
 
     <section id="skills" class="band">
       <div class="section-head">
         <h2>Skills</h2>
-        <p>Grouped by where they sit in an LLM system.</p>
+        <p>Grouped by where they sit in an LLM system. <span class="legend"><i></i> Filled tags are the ones behind the paid work above.</span></p>
       </div>
       <dl class="skills">
-        <div><dt>AI agents and LLMs</dt><dd><ul class="tags"><li>LangGraph</li><li>LangChain</li><li>Agentic workflows</li><li>Multi-agent orchestration</li><li>Tool and function calling</li><li>MCP</li><li>Prompt engineering</li><li>Structured outputs</li><li>Conversation memory</li><li>Groq</li><li>Ollama</li></ul></dd></div>
-        <div><dt>RAG and retrieval</dt><dd><ul class="tags"><li>Agentic RAG</li><li>Corrective RAG</li><li>Hybrid search (BM25 + semantic)</li><li>Query rewriting</li><li>Embeddings</li><li>Pinecone</li><li>OpenSearch</li><li>ChromaDB</li><li>FAISS</li><li>Sentence-Transformers</li><li>Tavily</li></ul></dd></div>
-        <div><dt>LLMOps and quality</dt><dd><ul class="tags"><li>LangSmith tracing</li><li>LLM observability</li><li>Token and cost optimisation</li><li>Response caching</li><li>Evidence grading</li><li>Hallucination mitigation</li><li>Audit logging</li></ul></dd></div>
-        <div><dt>Backend and data</dt><dd><ul class="tags"><li>Python</li><li>FastAPI</li><li>REST APIs</li><li>Pydantic</li><li>Streamlit</li><li>Redis</li><li>SQL</li><li>MySQL</li><li>SQLite</li><li>Neo4j</li><li>Neo4j GDS</li><li>Document intelligence</li></ul></dd></div>
+        <div><dt>AI agents and LLMs</dt><dd><ul class="tags"><li class="core">LangGraph</li><li class="core">AI agents</li><li class="core">Prompt engineering</li><li>LangChain</li><li>Agentic workflows</li><li>Multi-agent orchestration</li><li>Tool and function calling</li><li>MCP</li><li>Structured outputs</li><li>Conversation memory</li><li>Groq</li><li>Ollama</li></ul></dd></div>
+        <div><dt>RAG and retrieval</dt><dd><ul class="tags"><li class="core">RAG</li><li class="core">Hybrid search (BM25 + semantic)</li><li class="core">OpenSearch</li><li>Agentic RAG</li><li>Corrective RAG</li><li>Query rewriting</li><li>Embeddings</li><li>Pinecone</li><li>ChromaDB</li><li>FAISS</li><li>Sentence-Transformers</li><li>Tavily</li></ul></dd></div>
+        <div><dt>LLMOps and quality</dt><dd><ul class="tags"><li class="core">LangSmith tracing</li><li class="core">Token and cost optimisation</li><li class="core">Response caching</li><li>LLM observability</li><li>Evidence grading</li><li>Hallucination mitigation</li><li>Audit logging</li></ul></dd></div>
+        <div><dt>Backend and data</dt><dd><ul class="tags"><li class="core">Python</li><li class="core">FastAPI</li><li class="core">Redis</li><li class="core">Neo4j GDS</li><li class="core">Document intelligence</li><li>REST APIs</li><li>Pydantic</li><li>Streamlit</li><li>SQL</li><li>MySQL</li><li>SQLite</li></ul></dd></div>
         <div><dt>Cloud and DevOps</dt><dd><ul class="tags"><li>AWS EC2</li><li>AWS S3</li><li>AWS Lambda</li><li>Docker</li><li>Git</li><li>GitHub Actions</li><li>CI/CD</li><li>Claude Code</li></ul></dd></div>
-        <div><dt>ML and computer vision</dt><dd><ul class="tags"><li>PyTorch</li><li>TensorFlow</li><li>Hugging Face Transformers</li><li>Scikit-learn</li><li>NLP</li><li>OpenCV</li><li>CNN</li><li>Transfer learning</li><li>BERT</li></ul></dd></div>
+        <div><dt>ML and computer vision</dt><dd><ul class="tags"><li class="core">TensorFlow</li><li class="core">Transfer learning</li><li class="core">Scikit-learn</li><li>PyTorch</li><li>Hugging Face Transformers</li><li>NLP</li><li>OpenCV</li><li>CNN</li><li>BERT</li></ul></dd></div>
       </dl>
     </section>
 
@@ -280,6 +370,7 @@
     </section>
 
     <section id="contact" class="contact">
+      <img class="contact-photo" src="assets/profile.jpg" alt="" width="88" height="88" loading="lazy">
       <h2>Have an agent to build, or one that needs fixing?</h2>
       <p>I'm in Pune, India, and happy to talk about agentic systems, RAG quality, or roles on teams shipping them.</p>
       <div class="contact-row">
@@ -299,6 +390,7 @@
     <a href="#top">Back to top</a>
   </footer>
 
+  <script src="js/resume-search.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -494,6 +494,21 @@ details li::before, .points li::before {
 @media (max-width: 860px) { .feature { grid-template-columns: minmax(0, 1fr); } }
 .side-project { margin-top: 20px; }
 
+/* Earlier projects: compact cards, each ending in its code link */
+.earlier { margin: clamp(36px, 5vw, 56px) 0 18px; }
+.earlier h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 800; letter-spacing: -0.015em; line-height: 1.2; }
+.earlier p { color: var(--muted); margin-top: 4px; }
+.mini-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.mini {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  padding: 22px; box-shadow: var(--shadow-sm);
+}
+.mini h4 { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.01em; line-height: 1.25; }
+.mini p { color: var(--muted); font-size: 0.98rem; line-height: 1.5; }
+.mini .tags li { background: var(--sunken); border-color: transparent; font-size: 0.82rem; }
+.mini .text-link { margin-top: auto; }
+
 .text-link {
   font-weight: 600; color: var(--h-text, var(--blue-text)); text-decoration: none;
   background: linear-gradient(currentColor, currentColor) no-repeat 0 100% / 100% 2px;
@@ -519,6 +534,8 @@ details li::before, .points li::before {
 .edu-main h3 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.015em; line-height: 1.2; }
 .edu-main p { color: var(--muted); }
 .edu-main .cgpa { margin-top: 16px; color: var(--ink); font-size: 1.1rem; }
+.edu-main .course-label { margin: 18px 0 10px; font-size: 0.9rem; font-weight: 600; }
+.edu-main .tags li { background: var(--sunken); border-color: transparent; }
 .cgpa strong { font-size: clamp(3rem, 6vw, 4.4rem); font-weight: 800; letter-spacing: -0.04em; color: var(--mint-text); line-height: 1; }
 .certs li { padding: 12px 0; color: var(--muted); }
 .certs li + li { border-top: 1px solid var(--line); }

@@ -55,8 +55,14 @@
       });
     }, { threshold: 0.5 });
     $$('.flow, .bars, [data-count]').forEach(function (el) { once.observe(el); });
+
+    // The small nav photo only appears once the hero portrait has scrolled away.
+    new IntersectionObserver(function (entries) {
+      nav.classList.toggle('past-hero', !entries[0].isIntersecting);
+    }).observe($('.portrait'));
   } else {
     $$('.flow, .bars').forEach(function (el) { el.classList.add('in'); });
+    nav.classList.add('past-hero');
   }
 
   function countUp(el) {
@@ -95,6 +101,7 @@
   var traceEl = $('#trace');
   var answerEl = $('#answer-text');
   var citesEl = $('#cites');
+  var liveEl = $('#answer-live');
   var nodes = {};
   var edges = {};
   $$('.graph .node').forEach(function (n) { nodes[n.getAttribute('data-node')] = n; });
@@ -146,12 +153,14 @@
     answerEl.classList.remove('streaming');
   }
 
-  async function run(query) {
+  // announce: read the finished answer to screen readers once, instead of word by word.
+  async function run(query, announce) {
     var id = ++runId;
     traceEl.textContent = '';
     answerEl.textContent = '';
     answerEl.classList.remove('streaming');
     citesEl.textContent = '';
+    liveEl.textContent = '';
     current = null;
     Object.keys(nodes).forEach(function (k) { nodes[k].classList.remove('active', 'done'); });
     clearEdges();
@@ -165,8 +174,10 @@
     }
     finish();
 
+    var noEvidence = "I don't have evidence for that in the resume, so I won't guess. Try asking about LangGraph, RAG, AWS, fraud detection, his education, or how to get in touch.";
+    if (announce) liveEl.textContent = outcome.answer || noEvidence;
     if (!outcome.answer) {
-      await stream("I don't have evidence for that in the resume, so I won't guess. Try asking about LangGraph, RAG, AWS, fraud detection, his education, or how to get in touch.", id);
+      await stream(noEvidence, id);
       return;
     }
     await stream(outcome.answer, id);
@@ -183,12 +194,12 @@
   $('#ask').addEventListener('submit', function (e) {
     e.preventDefault();
     var q = input.value.trim();
-    if (q) run(q);
+    if (q) run(q, true);
   });
   $$('#chips button').forEach(function (btn) {
     btn.addEventListener('click', function () {
       input.value = btn.textContent;
-      run(btn.textContent);
+      run(btn.textContent, true);
     });
   });
 

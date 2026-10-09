@@ -89,7 +89,7 @@
       <div class="agent" id="agent">
         <div class="agent-head">
           <h2>Ask my resume</h2>
-          <p>Type any question. This panel runs the same route, retrieve, grade and rewrite loop I build for clients, using keyword search in your browser. It quotes the resume and has no AI model behind it, so it says "no evidence" instead of guessing.</p>
+          <p>Type any question. A route, retrieve, grade and rewrite loop searches my resume in your browser and quotes what it finds. There is no AI model behind it, so it says "no evidence" instead of guessing.</p>
         </div>
 
         <svg class="graph" viewBox="0 0 506 190" role="img" aria-label="Agent graph: route, retrieve, grade, then generate. Weak evidence loops through rewrite, or ends at no evidence.">
@@ -111,9 +111,10 @@
 
         <ol class="trace" id="trace" aria-label="Run trace"></ol>
 
-        <div class="answer" id="answer" aria-live="polite">
+        <div class="answer" id="answer">
           <p id="answer-text"></p>
           <div class="cites" id="cites"></div>
+          <p class="sr" id="answer-live" aria-live="polite"></p>
         </div>
 
         <form class="ask" id="ask" autocomplete="off">
@@ -370,7 +371,6 @@
     </section>
 
     <section id="contact" class="contact">
-      <img class="contact-photo" src="assets/profile.jpg" alt="" width="88" height="88" loading="lazy">
       <h2>Have an agent to build, or one that needs fixing?</h2>
       <p>I'm in Pune, India, and happy to talk about agentic systems, RAG quality, or roles on teams shipping them.</p>
       <div class="contact-row">
